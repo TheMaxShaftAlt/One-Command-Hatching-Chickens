@@ -1,0 +1,11 @@
+INIT: /scoreboard objectives add Incubation dummy
+
+INIT: /scoreboard objectives add Hatch dummy
+
+/scoreboard players add @e[type=Item] Incubation 1 {Item:{id:minecraft:egg}}
+
+/execute @e[score_Incubation_min=5000] ~ ~ ~ summon Chicken ~ ~ ~ {Age:-5000}
+
+/scoreboard players set @e[type=Chicken] Hatch 1 {Age:-5000}
+
+/execute @e[score_Hatch_min=1] ~ ~ ~ kill @e[score_Incubation_min=1,r=0]
