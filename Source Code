@@ -2,6 +2,8 @@ INIT: /scoreboard objectives add Incubation dummy
 
 INIT: /scoreboard objectives add Hatch dummy
 
+INIT: /tellraw @p ["",{"text":"Command by TheMaxShaft™","color":"dark_aqua","bold":"true"}]
+
 /scoreboard players add @e[type=Item] Incubation 1 {Item:{id:minecraft:egg}}
 
 /execute @e[score_Incubation_min=5000] ~ ~ ~ summon Chicken ~ ~ ~ {Age:-5000}
