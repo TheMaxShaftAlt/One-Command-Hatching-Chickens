@@ -6,10 +6,12 @@ INIT: /tellraw @p ["",{"text":"Command by TheMaxShaft™","color":"dark_aqua","b
 
 /scoreboard players add @e[type=Item] Incubation 1 {Item:{id:minecraft:egg}}
 
-/execute @e[score_Incubation_min=5000] ~ ~ ~ summon Chicken ~ ~ ~ {Age:-25000}
+/execute @e[score_Incubation_min=25000] ~ ~ ~ summon Chicken ~ ~ ~ {Age:-25000}
 
 /scoreboard players set @e[type=Chicken] Hatch 1 {Age:-25000}
 
 /execute @e[score_Hatch_min=1] ~ ~ ~ kill @e[score_Incubation_min=1,r=0]
 
 /scoreboard players set @e[type=Chicken] Hatch 0 {Age:-24500}
+
+/entitydata @e[Score_Incubation_Min=1] {Age:0}
